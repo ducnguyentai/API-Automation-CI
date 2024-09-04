@@ -1,0 +1,4 @@
+email,password,expectedStatusCode,ExpectedResponseKeys,ExpectedMessage
+{{$randomEmail}},password,200,data.email data.message data.id data.token,Register successfully
+eve.holt@reqres.in,,400,error,Missing password
+invalid,password,400,error,Email is not valid
