@@ -1,0 +1,35 @@
+[
+  {
+   "registerData": {
+     "email": "eve.holt@reqres.in",
+     "password": "password@1234"
+   },
+   "verificationData": {
+     "message": "Verify User is able to register new account with given register info: ",
+     "expectedResponseCode": 200,
+     "expectResponseToContain": "token"
+   }
+  },
+  {
+    "registerData": {
+     "email": "eve.holt@reqres.in",
+     "password": ""
+   },
+   "verificationData": {
+     "message": "Verify User is NOT able to register new account blank password: ",
+     "expectedResponseCode": 400,
+     "expectResponseToContain": "Missing password"
+   }
+  },
+  {
+    "registerData": {
+     "email": "eve.holtdd@reqres.in",
+     "password": "password@1234"
+   },
+   "verificationData": {
+     "message": "Verify User is NOT able to register new account with given register info: ",
+     "expectedResponseCode": 400,
+     "expectResponseToContain": "Note: Only defined users succeed registration"
+   }
+  }
+]
